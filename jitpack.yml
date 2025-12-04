@@ -1,5 +1,8 @@
 jdk:
   - openjdk21
 
+before_install:
+  - sed -i "s/rootProject.name = .*/rootProject.name = \"media\"/g" settings.gradle.kts
+
 install:
-  - gradle :media:build :media:publishToMavenLocal
+  - gradle clean :media:publishToMavenLocal

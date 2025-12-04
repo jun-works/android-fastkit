@@ -66,9 +66,11 @@ afterEvaluate {
                 // Jitpack은 artifactId를 기준으로 모듈을 구분합니다.
                 groupId = "com.github.jun-works.android-fastkit"
 
-                artifactId = "media"
+                artifactId = project.name
 
-                version = "1.0.1"
+                version = "1.0.2"
+
+                pom.packaging = "aar"
             }
         }
     }
