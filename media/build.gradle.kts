@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.junworks.fastkit.media"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -62,15 +62,9 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
 
-                // 그룹 ID는 보통 com.github.유저명.레포명 형식이 되지만,
-                // Jitpack은 artifactId를 기준으로 모듈을 구분합니다.
                 groupId = "com.github.jun-works.android-fastkit"
-
-                artifactId = project.name
-
-                version = "1.0.3"
-
-                pom.packaging = "aar"
+                artifactId = "media"
+                version = "1.0.4"
             }
         }
     }
